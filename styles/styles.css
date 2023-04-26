@@ -1,39 +1,72 @@
 * {
-    margin: 0;
+  margin: 0;
 }
 
 body {
-    width: 100%;
-    padding: 5px 3%;
-    box-sizing: border-box;
-    background-color: rgb(238, 238, 238);
+  width: 100%;
+  padding: 5px 3%;
+  box-sizing: border-box;
+  background-color: rgb(238, 238, 238);
 }
 
 .title.outOfRule {
-    padding: 40px 20px;
-    text-align: center;
-
+  padding: 40px 20px;
+  text-align: center;
 }
 
 .tests {
-    margin-bottom: 20px;
-    text-align: center;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 /* Containers */
-
 .containers {
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    padding: 40px 20px;
-    word-wrap: break-word;
-    box-sizing: border-box;
-    background-color: rgb(214, 236, 255);
-    border-radius: 16px;
-    box-shadow: 0px 0px 20px rgb(128, 128, 128);
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 40px 20px;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  background-color: rgb(214, 236, 255);
+  border-radius: 16px;
+  box-shadow: 0px 0px 20px rgb(128, 128, 128);
+}
+.containers.half {
+  width: 50%;
 }
 
-.containers.half {
-    width: 50%;
+.container.fluid {
+  container-type: inline-size;
 }
+
+h1,
+.fluid-mainTitle {
+  font-size: clamp(4.2rem, 5cqi, 6rem);
+}
+
+h2,
+.fluid-title {
+  font-size: clamp(2.8rem, 5cqi, 4rem);
+}
+
+h3,
+.fluid-subtitle {
+  font-size: clamp(2.1rem, 4cqi, 3rem);
+}
+
+h4,
+.fluid-caption {
+  font-size: clamp(1.4rem, 3cqi, 2rem);
+}
+
+h1.calculate,
+.fluid-mainTitle.calculate {
+  font-size: calc(3rem + 5cqi);
+}
+
+h2.calculate,
+.fluid-title.calculate {
+  font-size: calc(2rem + 5cqi);
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,124 @@
+// .fluid-container {
+//     container-type: inline-size;
+// }
+
+// /* Establishing the variables */
+// $main-title: 6rem;
+// $title: 4rem;
+// $subtitle: 3rem;
+// $caption: 2rem;
+
+// $main-title-base: 4rem;
+// $title-base: 3rem;
+
+// $font-size-diff: 0.3;
+
+// /* Make the basics styles for fonts */
+// h1,
+// .fluid-mainTitle {
+//     font-size: $main-title;
+// }
+
+// h2,
+// .fluid-title {
+//     font-size: $title;
+// }
+
+// h3,
+// .fluid-subtitle {
+//     font-size: $subtitle;
+// }
+
+// h4,
+// .fluid-caption {
+//     font-size: $caption;
+// }
+
+
+// /* Make the calculate styles for fonts */
+// h1.calculate,
+// .fluid-mainTitle.calculate {
+//     font-size: $main-title-base;
+// }
+
+// h2.calculate,
+// .fluid-title.calculate {
+//     font-size: $title-base;
+// }
+
+
+// /* MIXINS */
+
+// /* Mixin 1 */
+// :is(h1, .fluid-mainTitle, h2, .fluid-title, h3, .fluid-subtitle, h4, .fluid-caption) {
+//     font-size: clamp(
+//       max(1rem, font-size - font-size * font-size-diff, 0.3),
+//       font-size-fluid, 5cqi,
+//       font-size
+//     );
+// }
+
+// /* Mixin 2 */
+// :is(h1.calculate, .fluid-mainTitle.calculate, h2.calculate, .fluid-title.calculate) {
+//     font-size: calc(font-size + font-size-fluid, 3cqi);
+// }
+
+// Variables
+$font-size-diff: 0.3;
+
+$main-title: 6rem;
+$title: 4rem;
+$subtitle: 3rem;
+$caption: 2rem;
+
+$main-title-base: 3rem;
+$title-base: 2rem;
+
+// Estilos básicos
+.container.fluid {
+  container-type: inline-size;
+}
+
+// Mixins
+@mixin fluid-font-size($font-size, $font-size-fluid) {
+  font-size: clamp(
+    max(1rem, $font-size - $font-size * $font-size-diff),
+    $font-size-fluid,
+    $font-size
+  );
+}
+
+@mixin calculate-font-size($font-size-base, $font-size-fluid) {
+  font-size: calc($font-size-base + $font-size-fluid);
+}
+
+// Aplicación de mixins
+h1,
+.fluid-mainTitle {
+  @include fluid-font-size($main-title, 5cqi);
+}
+
+h2,
+.fluid-title {
+  @include fluid-font-size($title, 5cqi);
+}
+
+h3,
+.fluid-subtitle {
+  @include fluid-font-size($subtitle, 4cqi);
+}
+
+h4,
+.fluid-caption {
+  @include fluid-font-size($caption, 3cqi);
+}
+
+h1.calculate,
+.fluid-mainTitle.calculate {
+  @include calculate-font-size($main-title-base, 5cqi);
+}
+
+h2.calculate,
+.fluid-title.calculate {
+  @include calculate-font-size($title-base, 5cqi);
+}
