@@ -35,37 +35,37 @@ body {
   width: 50%;
 }
 
-.container.fluid {
+.container.is-fluid {
   container-type: inline-size;
 }
 
 h1,
-.fluid-mainTitle {
+.title.is-fluid.is-1 {
   font-size: clamp(4.2rem, 5cqi, 6rem);
 }
 
 h2,
-.fluid-title {
+.subtitle.is-fluid.is-2 {
   font-size: clamp(2.8rem, 5cqi, 4rem);
 }
 
 h3,
-.fluid-subtitle {
+.subtitle.is-fluid.is-3 {
   font-size: clamp(2.1rem, 4cqi, 3rem);
 }
 
 h4,
-.fluid-caption {
+.caption.is-fluid.is-4 {
   font-size: clamp(1.4rem, 3cqi, 2rem);
 }
 
 h1.calculate,
-.fluid-mainTitle.calculate {
+.title.is-fluid.is-1.calculate {
   font-size: calc(3rem + 5cqi);
 }
 
 h2.calculate,
-.fluid-title.calculate {
+.subtitle.is-fluid.is-2.calculate {
   font-size: calc(2rem + 5cqi);
 }
 
