@@ -45,17 +45,17 @@ h1,
 }
 
 h2,
-.subtitle.is-fluid.is-2 {
+.title.is-fluid.is-2 {
   font-size: clamp(2.8rem, 5cqi, 4rem);
 }
 
 h3,
-.subtitle.is-fluid.is-3 {
+.title.is-fluid.is-3 {
   font-size: clamp(2.1rem, 4cqi, 3rem);
 }
 
 h4,
-.caption.is-fluid.is-4 {
+.title.is-fluid.is-4 {
   font-size: clamp(1.4rem, 3cqi, 2rem);
 }
 
@@ -65,7 +65,7 @@ h1.calculate,
 }
 
 h2.calculate,
-.subtitle.is-fluid.is-2.calculate {
+.title.is-fluid.is-2.calculate {
   font-size: calc(2rem + 5cqi);
 }
 
